@@ -68,4 +68,16 @@
         * **You must change the password before you can use MySQL.**
 
 
-        
+### MySQL DEB Installation
+
+* DEB packages are available for APT Linux systems, either individually or bundled.
+* For a standard installation, install the following packages in the specified order:
+    1. The database common files package
+    2. The client package
+    3. The client metapackage
+    4. The server package
+    5. The server metapackage
+
+```bash
+sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.deb
+

@@ -31,6 +31,5 @@
 
 ### MySQL RPM Installation Files for Linux
 
-![alt text](image.png)
-
+![alt text](image-1.png)
 

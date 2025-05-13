@@ -99,14 +99,34 @@ sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.de
 On RPM-based systems, including Oracle Linux, Red Hat, Fedora, and CentOS, use `yum install`.
 ```bash
 yum install mysql-community-server
+```
+```bash
 yum install mysql-workbench
 ```
 
 On APT-based systems, including Ubuntu and Debian, use `apt-get install`:
 ```bash
 apt-get install mysql-community-server
+```
+```bash
 apt-get install mysql-workbench
 ```
 > Installing the `mysql-community-server` packages also installs the packages for the components the server requires.
 
----
+### Adding a Yum Repository for MySQL
+
+* Download the Yum repository RPM file from `http://dev.mysql.com/downloads/repo/yum/`.
+    * Choose the correct RPM for your distribution.
+    * Example: The "Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package" is called `mysql80-community-release-el7-3.noarch.rpm`.
+
+* Install the file by using the `yum localinstall` command, for example:
+    ```bash
+    yum localinstall mysql80-community-release-el7-3.noarch.rpm
+    ```
+    * The preceding command adds the MySQL Yum repository to the host's Yum configuration.
+
+* Enable or disable specific versions.
+    * MySQL 8.0 is enabled by default. Other versions are disabled.
+
+* Run `yum install packagename` to install a package from the new repository.
+

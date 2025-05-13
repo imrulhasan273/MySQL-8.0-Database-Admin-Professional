@@ -80,6 +80,7 @@
 
 ```bash
 sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.deb
+```
 
 ### Linux Distribution-Specific Repositories
 
@@ -92,5 +93,21 @@ sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.de
 * Supplemented by additional repositories that contain software not contained in the standard package repositories.
     * You can add these additional repositories to the package manager configuration on each host.
 * Example: `http://public-yum.oracle.com/` contains Oracle Linux packages.
+
+### Installing MySQL by Using a Package Manager
+
+* On RPM-based systems, including Oracle Linux, Red Hat, Fedora, and CentOS, use `yum install`.
+    * Example:
+    ```bash
+    yum install mysql-community-server
+    yum install mysql-workbench
+    ```
+* On APT-based systems, including Ubuntu and Debian, use `apt-get install`:
+    * Example:
+    ```bash
+    apt-get install mysql-community-server
+    apt-get install mysql-workbench
+    ```
+* Installing the `mysql-community-server` packages also installs the packages for the components the server requires.
 
 

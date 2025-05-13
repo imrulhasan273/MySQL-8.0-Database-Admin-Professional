@@ -81,3 +81,16 @@
 ```bash
 sudo dpkg -i mysql-{common,community-client,client,community-server,server}_*.deb
 
+### Linux Distribution-Specific Repositories
+
+* Many Linux distributions maintain their own package repositories.
+    * Hosted on the web or on a local filesystem.
+    * Accessed by using package managers.
+        * The repository website is specified in the package manager configuration on each host.
+        * You can download individual packages manually.
+* Contain software packages and their dependencies.
+* Supplemented by additional repositories that contain software not contained in the standard package repositories.
+    * You can add these additional repositories to the package manager configuration on each host.
+* Example: `http://public-yum.oracle.com/` contains Oracle Linux packages.
+
+

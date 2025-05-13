@@ -53,3 +53,19 @@
 * For a basic setup, you'll typically need `server`, `client`, and `libs`. Install other packages based on your specific requirements.
 * Always consult the official MySQL documentation for your specific version and Linux distribution for the most accurate information.
 
+### MySQL RPM Installation Process
+
+* The RPM installation performs the following tasks:
+    * Extracts RPM files to their default locations.
+    * Registers SysV init or systemd startup scripts.
+    * Sets up the `mysql` user and group in the operating system.
+        * The MySQL server process runs as the `mysql` user.
+* When you start the service for the first time using `service mysqld start` or `systemctl start mysqld`, MySQL:
+    * Creates the data directory and the default `my.cnf` file.
+        * These files are owned by the `mysql` user and group.
+    * Creates the default `root@localhost` account.
+    * Sets up a random temporary password for the `root` account and writes that password to the error log file (`/var/log/mysqld.log`).
+        * **You must change the password before you can use MySQL.**
+
+
+        

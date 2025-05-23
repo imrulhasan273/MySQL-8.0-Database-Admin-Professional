@@ -2,7 +2,7 @@
 
 ---
 
-# Installing and Upgrading MySQL
+# MySQL DBA Documentation
 
 ## Introduction
 
